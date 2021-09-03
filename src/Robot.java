@@ -3,6 +3,7 @@ public class Robot {
 	
 	String nombre_unidad;
 	int temperatura;
+	String mision;
 	
 	public Robot(String nombre_unidad) {
 		super();
@@ -27,9 +28,18 @@ public class Robot {
 
 	public void avanzar(){
 		if(temperatura >= 100){
-			System.out.println("No puedo seguir avanzando, la temperatura a alcanzado el limite " + temperatura + " grados");
+			System.out.println("No puedo seguir avanzando, la temperatura a alcanzado el limite. \nLa temperatura se encuentra en: " + temperatura + "° grados. \nIniciando retirada...");
 		}else{
 			System.out.println("Avanzado... Tempratura actual: " + temperatura + " grados");
 		}
 	}
+
+	public String getMision() {
+		return mision;
+	}
+
+	public void setMision(String mision) {
+		this.mision = mision;
+	}
+	
 }
